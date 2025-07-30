@@ -1,0 +1,211 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj",
+        "projectName": "ControleFinanceiro.Api",
+        "projectPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Api\\ControleFinanceiro.Api.csproj",
+        "packagesPath": "C:\\Users\\jpayr\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jpayr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Bussiness\\ControleFinanceiro.Bussiness.csproj": {
+                "projectPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Bussiness\\ControleFinanceiro.Bussiness.csproj"
+              },
+              "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Data\\ControleFinanceiro.Data.csproj": {
+                "projectPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Data\\ControleFinanceiro.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.20.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.315/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Bussiness\\ControleFinanceiro.Bussiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Bussiness\\ControleFinanceiro.Bussiness.csproj",
+        "projectName": "ControleFinanceiro.Bussiness",
+        "projectPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Bussiness\\ControleFinanceiro.Bussiness.csproj",
+        "packagesPath": "C:\\Users\\jpayr\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Bussiness\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jpayr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.315/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Data\\ControleFinanceiro.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Data\\ControleFinanceiro.Data.csproj",
+        "projectName": "ControleFinanceiro.Data",
+        "projectPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Data\\ControleFinanceiro.Data.csproj",
+        "packagesPath": "C:\\Users\\jpayr\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ApiControleFinanceiro\\src\\ControleFinanceiro.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jpayr\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.315/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
