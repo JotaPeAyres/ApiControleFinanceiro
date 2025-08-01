@@ -1,27 +1,33 @@
 using ControleFinanceiro.Bussiness.Interfaces;
+using ControleFinanceiro.Bussiness.Notificacoes;
 using ControleFinanceiro.Bussiness.Notifications;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Collections.Generic;
 
 namespace ControleFinanceiro.Api.Controllers;
 
 [ApiController]
 public abstract class MainController : ControllerBase
 {
-    private readonly INotifier _notifier;
-    protected MainController(INotifier notifier)
+    private readonly INotificador _notificador;
+
+    protected Guid UsuarioId { get; set; }
+    protected bool UsuarioAutenticado { get; set; }
+
+    protected MainController(INotificador notificador)
     {
-        _notifier = notifier;
+        _notificador = notificador;
     }
 
-    protected bool ValidOperation()
+    protected bool OperacaoValida()
     {
-        return !_notifier.HasNotification();
+        return !_notificador.TemNotificacao();
     }
 
     protected ActionResult CustomResponse(object result = null)
     {
-        if (ValidOperation())
+        if (OperacaoValida())
         {
             return Ok(new
             {
@@ -33,29 +39,28 @@ public abstract class MainController : ControllerBase
         return BadRequest(new
         {
             success = false,
-            errors = _notifier.GetNotifications().Select(s => s.Message)
+            errors = _notificador.ObterNotificacoes().Select(n => n.Mensagem)
         });
     }
 
     protected ActionResult CustomResponse(ModelStateDictionary modelState)
     {
-        if (!modelState.IsValid) NotifyErrorInvalidModel(modelState);
+        if (!modelState.IsValid) NotificarErroModelInvalida(modelState);
         return CustomResponse();
     }
 
-    protected void NotifyErrorInvalidModel(ModelStateDictionary modelState)
+    protected void NotificarErroModelInvalida(ModelStateDictionary modelState)
     {
-        var errors = modelState.Values.SelectMany(s => s.Errors);
-        foreach (var error in errors)
+        var erros = modelState.Values.SelectMany(e => e.Errors);
+        foreach (var erro in erros)
         {
-            var errorMessage = error.Exception == null ? error.ErrorMessage : error.Exception.Message;
-
-            NotifyError(errorMessage);
+            var errorMsg = erro.Exception == null ? erro.ErrorMessage : erro.Exception.Message;
+            NotificarErro(errorMsg);
         }
     }
 
-    protected void NotifyError(string errorMessage)
+    protected void NotificarErro(string mensagem)
     {
-        _notifier.Handle(new Notification(errorMessage));
+        _notificador.Handle(new Notificacao(mensagem));
     }
 }
