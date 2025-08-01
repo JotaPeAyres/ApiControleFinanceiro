@@ -219,15 +219,6 @@ dotnet run
 dotnet watch run
 ```
 
-### Opção 3: Docker
-```bash
-# Construir a imagem
-docker build -t controle-financeiro-api .
-
-# Executar o container
-docker run -p 8080:80 controle-financeiro-api
-```
-
 ### 🌐 Acessar a Aplicação
 
 Após iniciar, a API estará disponível em:
